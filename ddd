@@ -1,0 +1,12 @@
+<>
+      <div>
+        {results.map((i) => {
+          return (
+            <div key={i.id}>
+              <h2>{i.name}</h2>
+              <img src={i.image} alt="" />
+            </div>
+          );
+        })}
+      </div>
+    </>
