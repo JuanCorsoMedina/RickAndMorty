@@ -5,7 +5,7 @@ import { LoadingApi } from "./LoadingApi";
 import { NavPage } from "./NavPage";
 
 export const CharacterList = () => {
-  const { increment, counter } = useCounter(1);
+  const { increment, counter, decrement } = useCounter(1);
   const { data, isLoading } = useFetch(
     `https://rickandmortyapi.com/api/character/?page=${counter}`
   );
@@ -17,6 +17,15 @@ export const CharacterList = () => {
       <div className="container">
         <header>
           <p>Page: {counter}</p>
+
+          <button
+            className="btn btn-primary btn-sm"
+            onClick={() => {
+              decrement();
+            }}
+          >
+            Before Page
+          </button>
           <button
             className="btn btn-primary btn-sm"
             onClick={() => {
