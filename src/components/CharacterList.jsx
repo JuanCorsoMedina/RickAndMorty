@@ -24,7 +24,7 @@ export const CharacterList = () => {
               decrement();
             }}
           >
-            Before Page
+            Previous Page
           </button>
           <button
             className="btn btn-primary btn-sm"
